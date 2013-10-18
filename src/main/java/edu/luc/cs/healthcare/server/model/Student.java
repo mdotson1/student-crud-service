@@ -22,16 +22,16 @@ public class Student {
   public void setId(String id) {
     this.id = id;
   }
-  public String getFName() {
+  public String getFirstName() {
     return fName;
   }
-  public void setFName(String fName) {
+  public void setFirstName(String fName) {
     this.fName = fName;
   }
-  public String getLName() {
+  public String getLastName() {
 	  return lName;
   }
-  public void setLName(String lName) {
+  public void setLastName(String lName) {
 	  this.lName = lName;
   }
   
