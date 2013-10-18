@@ -9,12 +9,20 @@
 	<url>http://maven.apache.org</url>
 	<dependencies>
 		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-webapp</artifactId>
+			<version>9.0.6.v20130930</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.eclipse.jetty.orbit</groupId>
+		    <artifactId>org.objectweb.asm</artifactId>
+		    <version>3.3.1.v201105211655</version>
+		</dependency>
+		<dependency>
 			<groupId>com.sun.jersey</groupId>
 			<artifactId>jersey-bundle</artifactId>
 			<version>1.17.1</version>
 		</dependency>
-		<!-- <dependency> <groupId>activemq</groupId> <artifactId>jaxb-api</artifactId> 
-			<version>20050407</version> </dependency> -->
 		<dependency>
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-jaxrs</artifactId>
@@ -41,11 +49,13 @@
 	</dependencies>
 	<build>
 		<plugins>
+<!--
 			<plugin>
 				<groupId>org.eclipse.jetty</groupId>
 				<artifactId>jetty-maven-plugin</artifactId>
 				<version>9.0.5.v20130815</version>
 			</plugin>
+-->
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>2.3.2</version>
@@ -54,6 +64,18 @@
 					<target>1.7</target>
 				</configuration>
 			</plugin>
+	                <plugin>
+		                <groupId>org.apache.maven.plugins</groupId>
+                		<artifactId>maven-dependency-plugin</artifactId>
+		                <version>2.4</version>
+                		<executions>
+					<execution>
+			                        <id>copy-dependencies</id>
+                        			<phase>package</phase>
+			                        <goals><goal>copy-dependencies</goal></goals>
+		                        </execution>
+                		</executions>
+            		</plugin>
 		</plugins>
 		<finalName>student-crud-service</finalName>
 	</build>
