@@ -1,8 +1,5 @@
 package edu.luc.cs.healthcare.server;
 
-import java.io.IOException;
-import javax.servlet.ServletException;
-import javax.servlet.http.*;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.webapp.WebAppContext;
 
@@ -14,7 +11,7 @@ public class Main {
 
         final WebAppContext webapp = new WebAppContext();
         webapp.setContextPath("/");
-        // TODO verify that this is the preferred way
+        // TODO verify that this is the preferred way - looks to be correct.
         webapp.setWar("target/student-crud-service.war");
         server.setHandler(webapp);
 

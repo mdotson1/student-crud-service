@@ -4,36 +4,40 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 public class Student {
-  private String id;
-  private String fName;
-  private String lName;
-  
-  public Student(){
-    
-  }
-  public Student (String id, String fName, String lName){
-    this.id = id;
-    this.fName = fName;
-    this.lName = lName;
-  }
-  public String getId() {
-    return id;
-  }
-  public void setId(String id) {
-    this.id = id;
-  }
-  public String getFirstName() {
-    return fName;
-  }
-  public void setFirstName(String fName) {
-    this.fName = fName;
-  }
-  public String getLastName() {
-	  return lName;
-  }
-  public void setLastName(String lName) {
-	  this.lName = lName;
-  }
-  
-  
+	private String id;
+	private String firstName;
+	private String lastName;
+
+	public Student(){
+
+	}
+	public Student (String id, String fName, String lName){
+		this.id = id;
+		this.firstName = fName;
+		this.lastName = lName;
+	}
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String fName) {
+		this.firstName = fName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lName) {
+		this.lastName = lName;
+	}
+
+	public String toJson() {
+		final String str = "{\"firstName\":\"" + firstName + "\"," +
+				"\"id\":\"" + id + "\",\"lastName\":\"" + lastName + "\"}";
+		return str;
+	}
 } 
