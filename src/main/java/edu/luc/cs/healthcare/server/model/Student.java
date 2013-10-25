@@ -19,20 +19,23 @@ public class Student {
 	public String getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public Student setId(String id) {
 		this.id = id;
+		return this;
 	}
 	public String getFirstName() {
 		return firstName;
 	}
-	public void setFirstName(String fName) {
+	public Student setFirstName(String fName) {
 		this.firstName = fName;
+		return this;
 	}
 	public String getLastName() {
 		return lastName;
 	}
-	public void setLastName(String lName) {
+	public Student setLastName(String lName) {
 		this.lastName = lName;
+		return this;
 	}
 
 	public String toJson() {
