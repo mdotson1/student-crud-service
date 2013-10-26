@@ -5,14 +5,14 @@ to run locally (set PORT environment variable or will default to 8080):
 foreman start
 
 Methods for http://student-crud-service.herokuapp.com/rest/students  
-GET - get all students
-POST - create student and randomly generate an ID
-DELETE - delete all students
+GET - get all students  
+POST - create student and randomly generate an ID  
+DELETE - delete all students  
 
 Methods for http://student-crud-service.herokuapp.com/rest/students/{id}  
-GET - get student at this ID
-PUT - update student at this ID
-DELETE - delete student at this ID
+GET - get student at this ID  
+PUT - update student at this ID  
+DELETE - delete student at this ID  
 
 App URL:  
 http://student-crud-service.herokuapp.com/rest/students
